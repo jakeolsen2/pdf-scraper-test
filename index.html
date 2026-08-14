@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Scraper Test Site</title>
+</head>
+<body>
+  <h1>PDF Scraper Test Site</h1>
+  <p>This is a small, self-hosted site built for testing PDF-scraping tools. All PDFs here are dummy files created for this purpose.</p>
+
+  <h2>Direct links</h2>
+  <ul>
+    <li><a href="standalone-flyer.pdf">Standalone Flyer (root-relative)</a></li>
+    <li><a href="./docs/getting-started.pdf">Getting Started Guide (relative, ./ prefix)</a></li>
+    <li><a href="docs/user-manual.pdf">User Manual (relative)</a></li>
+  </ul>
+
+  <h2>Nested sections</h2>
+  <ul>
+    <li><a href="reports/index.html">Reports section</a> (contains a further nested folder)</li>
+    <li><a href="archive/index.html">Archive section</a> (PDF only reachable from here)</li>
+  </ul>
+
+  <h2>Edge cases</h2>
+  <ul>
+    <li><a href="docs/getting-started.pdf?utm_source=test&ref=homepage">Getting Started Guide with query string</a></li>
+    <li><a href="redirect.html">A page that redirects before reaching a PDF</a></li>
+    <li><a href="docs/missing.pdf">Broken link (404 test)</a></li>
+    <li><a href="mailto:test@example.com">Non-PDF link (mailto, should be ignored)</a></li>
+  </ul>
+</body>
+</html>
